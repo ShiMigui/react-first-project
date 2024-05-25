@@ -1,0 +1,16 @@
+body{
+  background-color: rgb(15, 20, 30);
+}
+
+.posts{
+  display: grid;
+  grid-template-columns: repeat(autofill, 1fr);
+  gap: 10px;
+}
+
+.post-card{
+  color: white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
