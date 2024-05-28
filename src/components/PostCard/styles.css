@@ -1,0 +1,17 @@
+.post-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: rgba(255, 255, 255, 0.1) 0 0 10px;
+    transition: transform 100ms ease-in-out;
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+}
+
+.post-card img {
+    width: 100%;
+}
+
+.post-content {
+    padding: 10px;
+}
