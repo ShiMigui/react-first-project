@@ -53,11 +53,10 @@ export class Home extends Component {
     }
 
     render() {
-        const { posts, postsPerPage, allPosts, searchValue } = this.state;
+        let { posts, postsPerPage, allPosts, searchValue } = this.state;
 
-        const hasMorePosts = allPosts.length <= posts.length + postsPerPage;
-
-        const filteredPosts = filterPosts(allPosts, searchValue, posts)
+        if (!!searchValue)
+            posts = filterPosts(allPosts, searchValue);
 
         return (
             <section className="container">
@@ -67,14 +66,14 @@ export class Home extends Component {
                 </div>
 
                 {
-                    filteredPosts.length > 0 ?
-                        <PostGrid posts={filteredPosts} /> :
+                    posts.length > 0 ?
+                        <PostGrid posts={posts} /> :
                         <p>Não há posts com: "{searchValue}"</p>
                 }
 
                 {!searchValue && (
                     <div className='flex justcenter'>
-                        <PrimaryButton disabled={hasMorePosts} text='More posts' onClick={this.loadMorePosts} />
+                        <PrimaryButton disabled={!(posts.length + postsPerPage <= allPosts.length)} text='More posts' onClick={this.loadMorePosts} />
                     </div>
                 )}
             </section>
