@@ -1,11 +1,11 @@
 import './styles.css'
 
-export const PrimaryButton = ({ text, onClick, disabled }) => {
-    disabled = !(disabled == null || disabled === false || disabled === 'false');
-
-    return (
-        <button disabled={disabled} className="primary-button" onClick={onClick}>
-            {text}
-        </button>
-    )
-}
+export const PrimaryButton = ({ text = '', onClick = () => null, disabled = false }) => (
+    <button
+        onClick={onClick}
+        disabled={disabled}
+        className="primary-button"
+    >
+        {text}
+    </button>
+)
