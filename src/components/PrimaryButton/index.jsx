@@ -1,10 +1,7 @@
 import './styles.css'
 
 export const PrimaryButton = ({ text, onClick, disabled }) => {
-    if (disabled == null)
-        disabled = false;
-    if (disabled === "")
-        disabled = true;
+    disabled = !(disabled == null || disabled === false || disabled === 'false');
 
     return (
         <button disabled={disabled} className="primary-button" onClick={onClick}>

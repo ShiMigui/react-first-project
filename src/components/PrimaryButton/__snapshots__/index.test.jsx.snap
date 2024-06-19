@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PrimaryButton /> must match with snapshots 1`] = `
+<button
+  class="primary-button"
+  disabled=""
+>
+  Button disabled
+</button>
+`;
+
+exports[`<PrimaryButton /> must match with snapshots 2`] = `
+<button
+  class="primary-button"
+>
+  Button enabled
+</button>
+`;
