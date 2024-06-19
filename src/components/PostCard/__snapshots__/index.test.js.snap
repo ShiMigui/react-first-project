@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostCard /> must match with the snapshot 1`] = `
+<div
+  class="post-card"
+  data-testid="post-card"
+>
+  <img
+    alt="Hello World"
+    src="https://www.somesite.com/img.jpg"
+  />
+  <div
+    class="post-content"
+  >
+    <h4>
+      Hello World
+    </h4>
+    <p>
+      This is a test
+    </p>
+  </div>
+</div>
+`;
