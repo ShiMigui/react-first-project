@@ -1,9 +1,9 @@
-function searchIn(value = '', search = '') {
-    return value.toLowerCase().includes(search);
-}
+const hasValue = (post, search) => (
+    post.title.toLowerCase().includes(search) ||
+    post.body.toLowerCase().includes(search) 
+);
 
 export const filterPosts = (posts = [], value = '') => {
-    let search = value.toLowerCase().trim();
-
-    return posts.filter(p => (searchIn(p.body, search) || searchIn(p.title, search)) ? p : null);
-}
+    const search = value.toLowerCase().trim();
+    return posts.filter(p => hasValue(p, search))
+};
