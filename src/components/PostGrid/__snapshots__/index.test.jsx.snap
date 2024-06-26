@@ -3,6 +3,7 @@
 exports[`<PostGrid /> must match with snapshot 1`] = `
 <div
   class="post-grid"
+  data-testid="post-grid"
 >
   <div
     class="post-card"

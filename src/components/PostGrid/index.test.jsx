@@ -23,8 +23,7 @@ describe('<PostGrid />', () => {
     })
 
     it('must match with snapshot', () => {
-        const { container } = render(grid);
-
-        expect(container.firstChild).toMatchSnapshot();
+        render(grid);
+        expect(screen.getByTestId('post-grid')).toMatchSnapshot();
     })
 });
