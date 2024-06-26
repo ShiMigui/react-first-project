@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react';
 import { PostGrid } from '.';
 
 const posts = [
-    { title: 'postcard 1', body: 'hello 1', url: 'generic.png' },
-    { title: 'postcard 2', body: 'hello 2', url: 'generic.png' },
-    { title: 'postcard 3', body: 'hello 3', url: 'generic.png' },
+    { id: 1, title: 'postcard 1', body: 'hello 1', url: 'generic.png' },
+    { id: 2, title: 'postcard 2', body: 'hello 2', url: 'generic.png' },
+    { id: 3, title: 'postcard 3', body: 'hello 3', url: 'generic.png' },
 ]
 
 const grid = <PostGrid posts={posts} />;
