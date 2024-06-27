@@ -1,13 +1,14 @@
-import { posts } from "../data/posts.js";
+const posts = require("../data/posts.json");
 
-export const loadPosts = async () => {
-    return posts.map((p) => {
-        const image = require(`../data/photos/${p.id}.jpg`);
+export async function loadPosts() {
+    const result = posts.map((p) => {
         return {
-            url: image.default || image,
+            url: require(`../data/photos/${p.id}.jpg`),
             title: p.title,
             body: p.body,
             id: p.id
         };
     });
+
+    return result;
 }
