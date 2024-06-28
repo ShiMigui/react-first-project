@@ -1,11 +1,11 @@
 import './styles.css';
 import { Component } from "react";
 
-import { loadPosts } from '../../funcs/loadPosts';
-import { filterPosts } from '../../funcs/filterPosts';
-import { PostGrid } from '../../components/PostGrid';
 import { PrimaryButton } from '../../components/PrimaryButton';
 import { TextInput } from '../../components/TextInput';
+import { filterPosts } from '../../funcs/filterPosts';
+import { PostGrid } from '../../components/PostGrid';
+import { loadPosts } from '../../funcs/loadPosts';
 
 export class Home extends Component {
     state = {
@@ -20,7 +20,7 @@ export class Home extends Component {
         this.loadPosts();
     }
 
-    loadPosts = async () => {
+    async loadPosts() {
         const { pageIndex, postsPerPage } = this.state;
         const posts = await loadPosts();
 
@@ -30,7 +30,7 @@ export class Home extends Component {
         })
     }
 
-    loadMorePosts = () => {
+    loadMorePosts() {
         let {
             postsPerPage,
             pageIndex,
